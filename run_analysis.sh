@@ -17,7 +17,7 @@ echo "========================================" | tee -a "$LOG_FILE"
 cd "$SCRIPT_DIR"
 source .venv/bin/activate
 
-python main.py --gemini --email 2>&1 | tee -a "$LOG_FILE"
+python3 main.py --model gpt-5.4-mini --email 2>&1 | tee -a "$LOG_FILE"
 
 echo "" | tee -a "$LOG_FILE"
 echo "  Run finished: $(date '+%Y-%m-%d %H:%M %Z')" | tee -a "$LOG_FILE"
